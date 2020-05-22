@@ -1,4 +1,4 @@
-### A Journal of the Plague Year Theme for Omeka S
+# A Journal of the Plague Year Theme for Omeka S
 Designed + Developed by [Extra Small Design](http://extrasmalldesign.com)
 Based on the Default Omeka S Theme
 
