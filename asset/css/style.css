@@ -45,6 +45,7 @@ body.item-set .item-sets .resource h4 {
 }
 body.item-set .item-sets .resource h4 a {
   background: #BF283E;
+  border-bottom: none !important;
   color: #fff;
   font-family: proxima-nova, sans-serif;
   font-size: 16px;
@@ -156,9 +157,11 @@ body.item.resource.show .property h4 {
   font-weight: 600;
   text-transform: uppercase;
 }
+.search-results li h4 {
+  margin: 0;
+}
 .search-results li a {
   color: #111;
-  display: block;
   font-family: kepler-std-semicondensed-dis, serif;
   font-size: 32px;
   line-height: 1.25;
@@ -427,6 +430,7 @@ a.button:hover,
     font-size: 12px;
     margin: 0;
     padding-right: 1rem;
+    padding-top: 0.25rem;
     text-transform: uppercase;
   }
   .site-switcher a {
@@ -435,10 +439,30 @@ a.button:hover,
     font-size: 13px;
     letter-spacing: 0.5px;
     padding-right: 1rem;
+    padding-top: 0.2rem;
     transition: all 0.25s ease-out;
   }
   .site-switcher a:hover {
     color: #BF283E;
+  }
+  .site-switcher .header-social {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+  }
+  .site-switcher .header-social a {
+    display: block;
+    font-size: 18px;
+    padding: 0 0.75rem;
+    transition: all 0.25s ease-out;
+  }
+  .site-switcher .header-social a:hover {
+    color: #BF283E !important;
+  }
+  .site-switcher .header-social li:last-child a {
+    padding-right: 0;
   }
 
   header {
@@ -859,7 +883,7 @@ a.button:hover,
     max-width: 55rem;
   }
   #content a {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
   }
 
   #content .blocks h2:first-of-type {

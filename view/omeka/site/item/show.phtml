@@ -41,10 +41,10 @@ if ($subjectValues) {
 
 <?php if (count($otherMedia) > 0): ?>
 <div id="other-media" class="property">
-    <h4><?php echo $this->translate('Other Media'); ?></h4>
+    <h4><?php echo $this->translate('Media'); ?></h4>
     <?php foreach($otherMedia as $media): ?>
     <div class="value">
-        <?php echo $media->linkPretty(); ?>
+        <?php echo $media->render(); ?>
     </div>
     <?php endforeach; ?>
 </div>

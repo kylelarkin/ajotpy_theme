@@ -29,7 +29,7 @@
             <?php if ($date = $item->value('dcterms:date')): ?>
                 <div class="date"><?php echo $date; ?></div>
             <?php endif; ?>
-            <?php echo $item->link($item->displayTitle()); ?>
+            <h4><?php echo $item->link($item->displayTitle()); ?></h4>
         </li>
         <?php endforeach; ?>
     </ul>

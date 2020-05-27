@@ -35,9 +35,11 @@
       font-weight: 600;
       text-transform: uppercase;
     }
+    h4 {
+      margin: 0;
+    }
     a {
       color: #111;
-      display: block;
       font-family: $heading-font;
       font-size: 32px;
       line-height: 1.25;

@@ -3,5 +3,10 @@ Designed + Developed by [Extra Small Design](http://extrasmalldesign.com)
 Based on the Default Omeka S Theme
 
 ## Changelog
+### 26 May 2020
+- Add Google Analytics
+- Update Other Media Type Block
+- Add FontAwesome Brands Free
+- Add Social Media Links
 ### 22 May 2020
-Initial Commit
+- Initial Commit

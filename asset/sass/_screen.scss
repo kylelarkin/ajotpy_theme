@@ -231,6 +231,7 @@ select {
     margin: 0 auto;
     padding: .5rem $spacing-m;
     display: flex;
+    //flex-wrap: wrap;
     width: 100%;
     h6 {
         color: #999;
@@ -238,6 +239,7 @@ select {
         font-size: 12px;
         margin: 0;
         padding-right: 1rem;
+        padding-top: .25rem;
         text-transform: uppercase;
     }
     a {
@@ -246,9 +248,29 @@ select {
         font-size: 13px;
         letter-spacing: .5px;
         padding-right: 1rem;
+        padding-top: .2rem;
         transition: all .25s ease-out;
         &:hover {
             color: $red;
+        }
+    }
+    .header-social {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        margin-left: auto;
+        padding: 0;
+        a {
+            display: block;
+            font-size: 18px;
+            padding: 0 .75rem;
+            transition: all .25s ease-out;
+            &:hover {
+                color: $red !important;
+            }
+        }
+        li:last-child a {
+            padding-right: 0;
         }
     }
 }
@@ -684,7 +706,7 @@ h3 + h2 {
         max-width: 55rem;
     }
     a {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #eee;
     }
 }
 

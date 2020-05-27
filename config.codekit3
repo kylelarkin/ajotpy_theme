@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "32147",
 "files": {
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/asset/css/print.css": {
 		"aP": 1,
 		"bl": 0,
@@ -62,6 +70,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/asset/js/brands.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/asset/js/brands.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/asset/js/default.js": {
 		"bF": 0,
 		"ft": 64,
@@ -69,6 +88,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/asset/js/default-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/asset/js/fontawesome.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/asset/js/fontawesome.min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -232,6 +262,25 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"/theme.jpg": {
 		"ft": 16384,
