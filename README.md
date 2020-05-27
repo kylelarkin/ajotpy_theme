@@ -10,5 +10,5 @@ Based on the Default Omeka S Theme
 - Add FontAwesome Brands Free
 - Add Social Media Links
 ### 22 May 2020 - v1.0.0
--Initial Commit
+- Initial Commit
 
