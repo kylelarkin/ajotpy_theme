@@ -235,25 +235,19 @@ select {
     width: 100%;
     h6 {
         color: #999;
+        cursor: pointer;
         letter-spacing: 1.5px;
         font-size: 12px;
         margin: 0;
         padding-right: 1rem;
         padding-top: .25rem;
         text-transform: uppercase;
-    }
-    a {
-        color: #fff !important;
-        display: block;
-        font-size: 13px;
-        letter-spacing: .5px;
-        padding-right: 1rem;
-        padding-top: .2rem;
         transition: all .25s ease-out;
         &:hover {
-            color: $red;
+            color: #fff;
         }
     }
+    
     .header-social {
         display: flex;
         list-style: none;
@@ -261,6 +255,7 @@ select {
         margin-left: auto;
         padding: 0;
         a {
+            color: #fff;
             display: block;
             font-size: 18px;
             padding: 0 .75rem;
@@ -271,6 +266,23 @@ select {
         }
         li:last-child a {
             padding-right: 0;
+        }
+    }
+}
+.site-switcher-list {
+    background: #222;
+    color: #fff;
+    padding: 0 $spacing-m .5rem $spacing-m;
+    a {
+        color: #fff !important;
+        display: block;
+        font-size: 13px;
+        letter-spacing: .5px;
+        padding-right: 1rem;
+        padding-top: .2rem;
+        transition: all .25s ease-out;
+        &:hover {
+            color: $red !important;
         }
     }
 }
@@ -337,6 +349,25 @@ header nav.open:before {
     content: "\f00d";
 }
 
+header nav ul.navigation ul {
+    height: 0;
+    &.open {
+        height: auto;
+        margin-top: .5rem;
+    }
+}
+
+header nav ul.navigation > li:first-child {
+    background: $red;
+    &:hover {
+        background: darken($red, 5%);
+    }
+    a:before {
+        content: '\f1e0';
+        font-family: "Font Awesome 5 Free";
+        padding-right: .5rem;
+    }
+}
 header nav ul {
     padding-left: 0;
     list-style: none;
@@ -370,18 +401,6 @@ header nav ul {
         position: relative;
     }
 
-    li:first-child {
-        background: $red;
-        &:hover {
-            background: darken($red, 5%);
-        }
-        a:before {
-            content: '\f1e0';
-            font-family: "Font Awesome 5 Free";
-            padding-right: .5rem;
-        }
-    }
-
     li li:last-of-type {
         padding-bottom: 0;
     }
@@ -400,6 +419,13 @@ header nav ul {
     
     li.parent {
         position: relative;
+        ul {
+            padding: 0;
+        }
+        button {
+            margin: 0;
+            padding: 0 .75rem;
+        }
     }
     
     .parent-link {
@@ -412,12 +438,8 @@ header nav ul {
     
     .child-toggle {
         color: #fff;
-        width: 2 * $spacing-l;
         text-align: center;
-        background-color: #fff;
-        border-left: 1px solid #fff;
         appearance: none;
-        
         &:before {
             color: #fff;
             font-family: "Font Awesome 5 Free";

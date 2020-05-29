@@ -55,6 +55,13 @@ footer {
 
 /* @end */
 
+/* @group ----- Site Switcher -- */
+.site-switcher-list {
+    display: flex;
+}
+
+/* @end */
+
 /* @group ----- Navigation ----- */
 
 header nav {
@@ -98,7 +105,7 @@ header nav > ul ul:hover > li {
     border: 0;
 }
 
-header nav ul.navigation {
+header nav ul {
     margin-left: -$spacing-s;
     position: static;
     display: flex;
@@ -107,15 +114,18 @@ header nav ul.navigation {
         display: none;
     }
 
+    li {
+        margin-right: .5rem;
+    }
     & > li:not(:last-child) {
-        margin-right: $spacing-m;
+        //margin-right: $spacing-m;
     }
 
     & > li > ul {
         position: absolute;
         top: 100%;
         left: -9999px;
-        background-color: #fff;
+        background-color: rgba(0,0,0,.95);
         padding: 0;
         list-style: none;
         width: 100%;
@@ -126,6 +136,9 @@ header nav ul.navigation {
         z-index: 1;
     }
 
+    & > li ul  {
+        display: none;
+    }
     & > li:hover > ul {
         @include container;
         padding: $spacing-m (2 * gutter());
@@ -134,18 +147,19 @@ header nav ul.navigation {
         border-bottom: 0;
         border-color: $light;
 
-        &:after {
-            content: "";
-            left: -9999px;
-            right: -9999px;
-            background-color: #fff;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            border-bottom: 1px solid $light;
-            border-top: 1px solid $light;
-            z-index: -1;
-        }
+        // &:after {
+        //     background: rgba(0,0,0,.95);
+        //     content: "";
+        //     left: -9999px;
+        //     right: -9999px;
+        //     background-color: #fff;
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: 0;
+        //     border-bottom: 1px solid $light;
+        //     border-top: 1px solid $light;
+        //     z-index: -1;
+        // }
     }
 
     & > li > ul > li {
@@ -164,6 +178,15 @@ header nav ul.navigation {
     
     li.parent {
         position: static;
+        &:hover {
+            ul {
+                display: flex;
+                height: auto;
+                li {
+                    width: auto;
+                }
+            }
+        }
     }
 }
 

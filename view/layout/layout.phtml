@@ -29,7 +29,7 @@ $userBar = $this->userBar();
         <?php echo $this->headScript(); ?>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45616698-4"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45616698-3"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -58,15 +58,17 @@ $userBar = $this->userBar();
         <?php echo $userBar; ?>
         <div class="site-switcher">
             <h6>Explore the Archives <i class="fa fa-caret-right"></i></h6>
-            <?php $allSites = $this->api()->search('sites', ['sort_by' => 'title'])->getContent(); ?>
-            <?php foreach ($allSites as $allSite): ?>
-                <?php echo $this->hyperlink($allSite->title(), $allSite->siteUrl(), ['class' => 'site-link']); ?>
-            <?php endforeach; ?>
             <ul class="header-social">
                <li><a href="https://www.instagram.com/covid19archive1/" title="Instagram" target="_blank"><span class="fab fa-instagram" title="Instagram"></span></a></li> 
                <li><a href="https://twitter.com/covid19archive1" title="Twitter"><span class="fab fa-twitter" title="Twitter" target="_blank"></span></a></li> 
                <li><a href="https://www.facebook.com/A-Journal-of-The-Plague-Year-An-Archive-of-Covid-19-105440631192458" title="Facebook" target="_blank"><span class="fab fa-facebook" title="Facebook"></span></a></li> 
             </ul>
+        </div>
+        <div class="site-switcher-list">
+            <?php $allSites = $this->api()->search('sites', ['sort_by' => 'title'])->getContent(); ?>
+            <?php foreach ($allSites as $allSite): ?>
+                <?php echo $this->hyperlink($allSite->title(), $allSite->siteUrl(), ['class' => 'site-link']); ?>
+            <?php endforeach; ?>
         </div>
         
         <?php if ($this->themeSetting('header_image')): ?>

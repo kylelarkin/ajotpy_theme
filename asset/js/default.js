@@ -25,6 +25,12 @@ var Omeka = {};
     $(document).ready(function() {
         $('header nav').addClass('closed');
 
+        // Site Switcher Toggle
+        $('.site-switcher-list').hide();
+        $('.site-switcher h6').click( function() {
+            $('.site-switcher-list').slideToggle();
+        });
+
         $('header nav').click(function() {
             $(this).toggleClass('open').toggleClass('closed');
         });

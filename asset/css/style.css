@@ -426,24 +426,17 @@ a.button:hover,
   }
   .site-switcher h6 {
     color: #999;
+    cursor: pointer;
     letter-spacing: 1.5px;
     font-size: 12px;
     margin: 0;
     padding-right: 1rem;
     padding-top: 0.25rem;
     text-transform: uppercase;
-  }
-  .site-switcher a {
-    color: #fff !important;
-    display: block;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    padding-right: 1rem;
-    padding-top: 0.2rem;
     transition: all 0.25s ease-out;
   }
-  .site-switcher a:hover {
-    color: #BF283E;
+  .site-switcher h6:hover {
+    color: #fff;
   }
   .site-switcher .header-social {
     display: flex;
@@ -453,6 +446,7 @@ a.button:hover,
     padding: 0;
   }
   .site-switcher .header-social a {
+    color: #fff;
     display: block;
     font-size: 18px;
     padding: 0 0.75rem;
@@ -463,6 +457,24 @@ a.button:hover,
   }
   .site-switcher .header-social li:last-child a {
     padding-right: 0;
+  }
+
+  .site-switcher-list {
+    background: #222;
+    color: #fff;
+    padding: 0 14px 0.5rem 14px;
+  }
+  .site-switcher-list a {
+    color: #fff !important;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+    transition: all 0.25s ease-out;
+  }
+  .site-switcher-list a:hover {
+    color: #BF283E !important;
   }
 
   header {
@@ -528,6 +540,26 @@ a.button:hover,
     content: "";
   }
 
+  header nav ul.navigation ul {
+    height: 0;
+  }
+  header nav ul.navigation ul.open {
+    height: auto;
+    margin-top: 0.5rem;
+  }
+
+  header nav ul.navigation > li:first-child {
+    background: #BF283E;
+  }
+  header nav ul.navigation > li:first-child:hover {
+    background: #aa2437;
+  }
+  header nav ul.navigation > li:first-child a:before {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    padding-right: 0.5rem;
+  }
+
   header nav ul {
     padding-left: 0;
     list-style: none;
@@ -558,17 +590,6 @@ a.button:hover,
     padding: 0.5rem 1rem;
     position: relative;
   }
-  header nav ul li:first-child {
-    background: #BF283E;
-  }
-  header nav ul li:first-child:hover {
-    background: #aa2437;
-  }
-  header nav ul li:first-child a:before {
-    content: "";
-    font-family: "Font Awesome 5 Free";
-    padding-right: 0.5rem;
-  }
   header nav ul li li:last-of-type {
     padding-bottom: 0;
   }
@@ -585,6 +606,13 @@ a.button:hover,
   header nav ul li.parent {
     position: relative;
   }
+  header nav ul li.parent ul {
+    padding: 0;
+  }
+  header nav ul li.parent button {
+    margin: 0;
+    padding: 0 0.75rem;
+  }
   header nav ul .parent-link {
     display: flex;
   }
@@ -593,10 +621,7 @@ a.button:hover,
   }
   header nav ul .child-toggle {
     color: #fff;
-    width: 56px;
     text-align: center;
-    background-color: #fff;
-    border-left: 1px solid #fff;
     appearance: none;
   }
   header nav ul .child-toggle:before {
@@ -1225,6 +1250,12 @@ td {
   }
 
   /* @end */
+  /* @group ----- Site Switcher -- */
+  .site-switcher-list {
+    display: flex;
+  }
+
+  /* @end */
   /* @group ----- Navigation ----- */
   header nav {
     margin: 0 auto !important;
@@ -1267,22 +1298,22 @@ header nav > ul ul:hover > li {
     border: 0;
   }
 
-  header nav ul.navigation {
+  header nav ul {
     margin-left: -7px;
     position: static;
     display: flex;
   }
-  header nav ul.navigation li ul:before {
+  header nav ul li ul:before {
     display: none;
   }
-  header nav ul.navigation > li:not(:last-child) {
-    margin-right: 14px;
+  header nav ul li {
+    margin-right: 0.5rem;
   }
-  header nav ul.navigation > li > ul {
+  header nav ul > li > ul {
     position: absolute;
     top: 100%;
     left: -9999px;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.95);
     padding: 0;
     list-style: none;
     width: 100%;
@@ -1292,7 +1323,10 @@ header nav > ul ul:hover > li {
     flex-flow: row wrap;
     z-index: 1;
   }
-  header nav ul.navigation > li:hover > ul {
+  header nav ul > li ul {
+    display: none;
+  }
+  header nav ul > li:hover > ul {
     max-width: 1700px;
     margin-left: auto;
     margin-right: auto;
@@ -1302,32 +1336,27 @@ header nav > ul ul:hover > li {
     border-bottom: 0;
     border-color: #dedede;
   }
-  header nav ul.navigation > li:hover > ul:after {
-    content: "";
-    left: -9999px;
-    right: -9999px;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    border-bottom: 1px solid #dedede;
-    border-top: 1px solid #dedede;
-    z-index: -1;
-  }
-  header nav ul.navigation > li > ul > li {
+  header nav ul > li > ul > li {
     width: 25%;
     font-size: 13.5px;
     font-weight: bold;
     padding-bottom: 28px;
   }
-  header nav ul.navigation > li > ul > li ul {
+  header nav ul > li > ul > li ul {
     font-weight: normal;
     padding: 0;
     list-style-type: none;
     height: auto;
   }
-  header nav ul.navigation li.parent {
+  header nav ul li.parent {
     position: static;
+  }
+  header nav ul li.parent:hover ul {
+    display: flex;
+    height: auto;
+  }
+  header nav ul li.parent:hover ul li {
+    width: auto;
   }
 
   header nav > ul > li > a {
