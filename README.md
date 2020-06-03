@@ -4,6 +4,8 @@ Designed + Developed by [Extra Small Design](http://extrasmalldesign.com)
 Based on the Default Omeka S Theme
 
 ## Changelog
+### 3 June 2020 - v1.0.3
+- Update Google Analytics ID
 ### 29 May 2020 - v1.0.2
 - Update Google Analytics ID
 - Sub-nav Style Fix
